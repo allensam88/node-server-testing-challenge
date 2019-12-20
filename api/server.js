@@ -30,7 +30,7 @@ server.post('/movies', (req, res) => {
         });
 });
 
-server.delete('movies/:id', (req, res) => {
+server.delete('/movies/:id', (req, res) => {
     Movies.remove(req.params.id)
         .then(deleted => {
             if (deleted) {

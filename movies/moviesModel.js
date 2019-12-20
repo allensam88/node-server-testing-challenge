@@ -34,6 +34,7 @@ async function update(id, changes) {
 
 function remove(id) {
     const deletedMovie = findById(id).then(item => item);
+    console.log('deleted movie', deletedMovie)
     return db('movies')
         .where({ id })
         .del()
